@@ -1,33 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Spotify</title>
-</head>
+  </head>
 
+  <body>
+    <main class="d-flex">
+      <aside class="sidebar">
+        <section class="sidebar-top d-flex flex-col">
+          <div class="mb-20 px-20">
+            <img class="logo-large" src="./img/logo.svg" alt="Logo large" />
+          </div>
+          <nav class="mainbar mb-25">
+            <ul>
+              <li class="mainbar-item d-flex al-center mb-10 px-20">
+                <i class="fa-solid fa-house mr-10"></i>
+                <a href="#">Home</a>
+              </li>
+              <li class="mainbar-item d-flex al-center mb-10 px-20">
+                <i class="fa-solid fa-magnifying-glass mr-10"></i>
+                <a href="#">Cerca</a>
+              </li>
+              <li class="mainbar-item d-flex al-center px-20">
+                <i class="fa-solid fa-lines-leaning mr-10"></i>
+                <a href="#">La tua libreria</a>
+              </li>
+            </ul>
+          </nav>
 
-<header>
+          <div class="playlist-menu d-flex flex-col overflow-hidden">
+            <h3 class="px-20 mb-10">Playlist</h3>
+            <div class="d-flex px-20 mb-10">
+              <i class="ri-add-box-fill mr-10"></i>
+              <button class="btn btn-classic">Crea Playlist</button>
+            </div>
+            <ul class="playlist-bottom overflow-auto">
+              <li class="playlist mb-10 px-20">Nome Playlist</li>
+              <li class="playlist mb-10 px-20">Nome Playlist</li>
+              <li class="playlist mb-10 px-20">Nome Playlist</li>
+              <li class="playlist mb-10 px-20">Nome Playlist</li>
+              <li class="playlist mb-10 px-20">Nome Playlist</li>
+              <li class="playlist mb-10 px-20">Nome Playlist</li>
+              <li class="playlist px-20">Nome Playlist</li>
+            </ul>
+          </div>
+        </section>
 
+        <section class="sidebar-bottom p-20 d-flex flex-col justify-end">
+          <button class="btn btn-classic d-flex al-center">
+            <i class="ri-arrow-down-circle-line mr-10"></i>
+            <p>Install app</p>
+          </button>
+          <hr />
+          <div>
+            <button class="btn btn-classic user d-flex al-center">
+              <i class="fa-solid fa-user mr-10"></i>
+              <p>John Doe</p>
+            </button>
+          </div>
+        </section>
+      </aside>
 
-</header>
+      <div class="main-section d-flex flex-col">
+        <section class="first d-flex al-center px-20 justify-end">
+          <button class="btn btn-white">Effettua l'upgrade</button>
+        </section>
+        <section class="second d-flex al-center justify-center">
+          <nav class="topbar">
+            <ul class="d-flex al-center">
+              <li class="nav-item d-flex al-center flex-col px-10">
+                <a class="mb-5" href="#">In evidenza</a>
+                <div class=""></div>
+              </li>
+              <li class="nav-item d-flex al-center flex-col px-10">
+                <a class="mb-5" href="#">Podcast</a>
+              </li>
+              <li class="nav-item d-flex al-center flex-col px-10">
+                <a class="mb-5" href="#">Classifiche</a>
+              </li>
+              <li class="nav-item d-flex al-center flex-col px-10">
+                <a class="mb-5" href="#">Generi e mood</a>
+              </li>
+              <li class="nav-item d-flex al-center flex-col px-10">
+                <a class="mb-5" href="#">Nuove uscite</a>
+              </li>
+              <li class="nav-item d-flex flex-col al-center px-10">
+                <a class="mb-5" href="#">Scopri</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <section class="third">
+          <div class="row px-30 mb-50">
+            <h2 class="mb-30 title">Recently played</h2>
+            <div class="cards d-flex">
+              <div class="card text-center mr-20">
+                <div class="mb-10 card-image">
+                  <img src="./img/metal_lifting.jpg" alt="" />
+                  <i class="ri-play-circle-line"></i>
+                </div>
+                <h3 class="mb-5">Heavy Metal</h3>
+                <p>Subtitle</p>
+              </div>
+              <div class="card text-center mr-20">
+                <div class="mb-10 card-image">
+                  <img src="./img/stranger.jpeg" alt="" />
+                  <i class="ri-play-circle-line"></i>
+                </div>
+                <h3 class="mb-5">
+                  Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)
+                </h3>
+                <p>Kyle Dixon & Michael Stein</p>
+              </div>
 
+              <div class="card text-center mr-20">
+                <div class="mb-10 card-image">
+                  <img src="./img/aquietplace.jpeg" alt="" />
+                  <i class="ri-play-circle-line"></i>
+                </div>
+                <h3 class="mb-5">A quiet place</h3>
+                <p>Subtitle</p>
+              </div>
 
-<body>
-    
-</body>
+              <div class="card text-center mr-20">
+                <div class="mb-10 card-image">
+                  <img src="./img/split.jpeg" alt="" />
+                  <i class="ri-play-circle-line"></i>
+                </div>
+                <h3 class="mb-5">Split</h3>
+                <p>Subtitle</p>
+              </div>
 
+              <div class="card text-center mr-20">
+                <div class="mb-10 card-image">
+                  <img src="./img/cure.jpeg" alt="" />
+                  <i class="ri-play-circle-line"></i>
+                </div>
+                <h3 class="mb-5">A cure for wellness</h3>
+                <p>Subtitle</p>
+              </div>
 
-<footer>
+              <div class="card text-center">
+                <div class="mb-10 card-image">
+                  <img src="./img/sinister.jpeg" alt="" />
+                  <i class="ri-play-circle-line"></i>
+                </div>
+                <h3 class="mb-5">Sinister</h3>
+                <p>Subtitle</p>
+              </div>
+            </div>
+          </div>
 
+          <div class="row px-30 mb-50">
+            <h2 class="mb-10 title">Creato per John Doe</h2>
+            <p class="mb-30 subtitle">
+              Più ascolti, più accurati saranno i suggerimenti
+            </p>
+            <div class="cards d-flex">
+              <div class="card text-center mr-20">
+                <div class="mb-10 card-image">
+                  <img src="./img/radar.jpeg" alt="" />
+                  <i class="ri-play-circle-line"></i>
+                </div>
+                <h3>Release Radar</h3>
+              </div>
 
-    
-</footer>
+              <div class="card text-center mr-20">
+                <div class="mb-10 card-image">
+                  <img src="./img/mixdaily.jpeg" alt="" />
+                  <i class="ri-play-circle-line"></i>
+                </div>
+                <h3 class="mb-5">Daily Mix 1</h3>
+              </div>
+            </div>
+          </div>
 
+          <div class="row px-30">
+            <h2 class="mb-10 title">Artisti più popolari</h2>
+            <p class="mb-30 subtitle">
+              Più ascolti, più accurati saranno i suggerimenti
+            </p>
+            <div class="cards d-flex">
+              <div class="card artist text-center mr-20">
+                <div class="mb-10 card-image">
+                  <img class="circle" src="./img/youg.jpeg" alt="" />
+                  <i class="ri-play-circle-line"></i>
+                </div>
+                <h3>Release Radar</h3>
+              </div>
 
+              <div class="card text-center">
+                <div class="mb-10 card-image">
+                  <img class="circle" src="./img/einaudi.jpeg" alt="" />
+                  <i class="ri-play-circle-line"></i>
+                </div>
+                <h3 class="mb-5">Daily Mix 1</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+
+  <footer class="d-flex justify-center">
+    <div class="first d-flex al-center">
+      <img class="w-20 mr-20" src="./img/sinister.jpeg" alt="Song" />
+      <div class="w-30 d-flex flex-col mr-10">
+        <h4>Sinister</h4>
+        <p>Brano nome</p>
+      </div>
+      <div class="d-flex justify-end icons">
+        <i class="fa-regular fa-heart mr-10"></i>
+        <i class="fa-regular fa-folder"></i>
+      </div>
+    </div>
+    <div class="second d-flex flex-col al-center justify-center p-20">
+      <div class="d-flex al-center justify-center w-80 mb-10">
+        <i class="fa-solid fa-shuffle mr-20"></i>
+        <i class="fa-solid fa-backward-step mr-20"></i>
+        <i class="ri-play-circle-line player mr-20"></i>
+        <i class="fa-solid fa-forward-step mr-20"></i>
+        <i class="fa-solid fa-rotate-right"></i>
+      </div>
+      <div class="d-flex al-center justify-between w-80 px-20">
+        <p class="w-20 time text-left">0:25</p>
+        <div class="w-60 play-bar d-flex">
+          <div class="w-20 progression"></div>
+        </div>
+        <p class="w-20 time text-right">4:35</p>
+      </div>
+    </div>
+    <div class="third d-flex al-center p-20">
+      <i class="fa-solid fa-list-ul mr-20"></i>
+      <i class="fa-solid fa-tv mr-20"></i>
+      <i class="fa-solid fa-volume-high mr-20"></i>
+      <div class="w-60 play-bar d-flex">
+        <div class="w-80 progression"></div>
+      </div>
+    </div>
+  </footer>
 </html>
